@@ -59,9 +59,8 @@ void execute(char* const args[])
       {
         exec(args);
       }
+    fprintf(stderr, "Command exited sucessfully\n");   // status code 0
   }
-  fprintf(stderr, "Command exited sucessfully\n");   // status code 0
-  fprintf("Command exited with %d\n",);              // status code other 
 
       
 

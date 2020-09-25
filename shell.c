@@ -5,15 +5,16 @@
 #include <stdio.h>
 #include <unistd.h>
 
+
 void execute(char* const args[])
 {
+  int i;
   printf("*** Entered:");
   for (i = 0; args[i] != NULL; i++)
     printf(" %s", args[i]);
   printf(" (%d words)\n", i);
 
-  int i;
-  int status = exec(args);
+  int status = exec args;
   if (status == 1)
   { /* error occurred */
     fprintf(stderr, "Command not found\n");
